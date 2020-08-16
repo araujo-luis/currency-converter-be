@@ -4,7 +4,6 @@ import bodyParser from 'body-parser'
 import cors from 'cors';
 import router from "./routes";
 
-
 dotenv.config();
 const PORT: string = process.env.PORT || '4000';
 
