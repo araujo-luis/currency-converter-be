@@ -3,7 +3,6 @@ import { findCountriesByName } from '../services/CountrySearchService';
 
 export const findByName = async (req: Request, res: Response) => {
     const { name } = req.params;
-    console.log('controller')
     try {
         const countries = await findCountriesByName(name);
         res.status(200).json(countries)
