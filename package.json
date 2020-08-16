@@ -1,0 +1,11 @@
+{
+  "name": "currency-coverter-be",
+  "version": "1.0.0",
+  "description": "Anyfin Assignment - Currency Converter",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luis Araujo",
+  "license": "ISC"
+}
