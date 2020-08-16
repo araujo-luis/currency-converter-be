@@ -7,7 +7,9 @@ export const {
     EXHANGE_RATE_BASE_URL,
     EXCHANGE_API_KEY,
     BASE_CURRENCY,
-    JWT_SECRET
+    JWT_SECRET,
+    REQUESTS_TIME_LIMIT_IN_SECONDS,
+    MAX_REQUESTS
 } = process.env;
 
 
