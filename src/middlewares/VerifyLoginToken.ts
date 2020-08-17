@@ -11,7 +11,7 @@ export const verifyToken = (req: Request, res: Response, next: NextFunction) => 
         message: 'Unauthorized'
     });
 
-    const [bearerToken] = authorization.split(' ');
+    const bearerToken = authorization.replace('Bearer ','');
 
     jwt.verify(bearerToken, secret, (err, decoded) => {
         if (err) {

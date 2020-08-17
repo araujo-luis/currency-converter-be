@@ -11,13 +11,13 @@ export const login = async (req: Request, res: Response) => {
         // 7 days
         const days = 1000 * 60 * 60 * 24 * 7;
         const expires = new Date(new Date().getTime() + days)
-        res.status(200).set({
-            'access_token': token,
+
+        res.status(200).cookie('token', token, { httpOnly: true }).set({
             'expires_in': expires,
             'token_type': 'Bearer',
         }).json({
             message: 'Authenticated',
-            username
+            token
         })
     } catch (error) {
         res.status(500).json({
