@@ -6,7 +6,7 @@ const userRequests = new Map();
 export const requestLimiter = (req: Request, res: Response, next: NextFunction) => {
     const { authorization } = req.headers;
 
-    const [bearerToken] = authorization!.split(' ');
+    const bearerToken = authorization?.replace('Bearer ', '');
 
     if (!userRequests.has(bearerToken)) {
         userRequests.set(bearerToken, { requests: 0, date: new Date() });
